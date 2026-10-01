@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}ComicCraft Export{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Ready to download</p>
+  <h1>Your comic is ready.</h1>
+</section>
+
+<div class="card">
+  <p>{{ filename or 'Your PDF has been generated successfully.' }}</p>
+  <a class="download-link" href="/download/{{ filename }}">Download PDF</a>
+</div>
+{% endblock %}
